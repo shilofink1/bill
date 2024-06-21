@@ -1,4 +1,8 @@
-* {
+/* // HTML RESET */
+
+*,
+::before,
+*::after  {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -6,14 +10,16 @@
 
 img {
     display: inline;
+    
     width: 300px;
     height: auto;
-    padding: 5px;
 }
 
 html {
     font-size: 2rem;
 }
+
+/* // NAVIGATION MENU */
 
 header {
     background-image: url(mountains.jpg);
@@ -114,49 +120,37 @@ header {
   .item:nth-child(4):hover:before {
     height: 100%;
   }
-
   
 
-
 body {
-    background-image: url(havre-scenery.jpg);
+    background-image: url(Beaver\ Creek.jpg);
     background-repeat: no-repeat;
-    background-size: fill;
+    background-size: cover;
     background-color: rgb(114, 52, 52);
-    height: 90vh;
+    min-height: 100vh;
     
 }
 
 main {
     background-color: bisque;
-    
-    outline: 2px solid green;
+    margin: 0 50px;
+    outline: 5px solid #003b49;
     width: 80vw;
     margin: auto;
-    position: relative;
-    overflow: hidden;
-    
+    border-radius: 10px;
 }
 
-div.myStory {
+
+
+img.shake {
+    float: right;
+    margin: 10px;
+}
+
+div.summary {
     margin: 30px;
     padding: 15px;
-    font-size: 1rem;
-    
 }
-
-img.bill1 {
-
-    float: left;
-    margin: 15px;
-}
-
-img.dogScout {
-    float: right;
-    margin: 15px;
-    
-}
-
 
 footer {
     background-image: url(mountains.jpg);
@@ -171,13 +165,13 @@ footer {
   color: #f2c75c;
   display: flex;
   justify-content: center;
+  
 }
-
 .copywrite {
-    background-color: #003b49;
-    border-radius: 10px;
-    width: 600px;
-    text-align: center;
+  background-color: #003b49;
+  border-radius: 10px;
+  width: 600px;
+  text-align: center;
 }
 
 
@@ -210,24 +204,14 @@ footer {
     font-size: .4rem;
   }
 
-  img.bill1 {
+  img.shake {
     display: block;
     width: auto;
     margin: auto;
     max-width: 100%;
     max-height: 100%;
     float: none;
-}
-
-img.dogScout {
-    display: block;
-    width: auto;
-    margin: auto;
-    max-width: 100%;
-    max-height: 100%;
-    padding: 25px;
-    float: none;
-}
+  }
 }
 
 @media screen and (max-width: 690px) {
@@ -259,22 +243,12 @@ img.dogScout {
     font-size: .4rem;
   }
 
-  img.bill1 {
+  img.shake {
     display: block;
     width: auto;
     margin: auto;
     max-width: 100%;
     max-height: 100%;
     float: none;
-}
-
-img.dogScout {
-    display: block;
-    width: auto;
-    margin: auto;
-    max-width: 100%;
-    max-height: 100%;
-    padding: 25px;
-    float: none;
-}
+  }
 }
