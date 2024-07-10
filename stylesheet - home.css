@@ -10,36 +10,40 @@
 
 img {
     display: inline;
-    
-    width: 300px;
+    max-width: 300px;
     height: auto;
 }
 
 html {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    font-family: "Playfair Display", sans-serif;
 }
 
-/* // NAVIGATION MENU */
+/* // NAVIGATION MENU ----------------------------------------------------------------------------------------*/
 
 header {
-  background-image: url(mountains.jpg);
+  background-image: url(fotor-ai-2024062794042.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  background-color: rgb(70, 70, 209);
+  background-position: 50% 73%;
+  background-color: rgb#003b49;
   padding: 10px;
-  box-shadow: 0px 5px 15px tan;
-    
-    
+  box-shadow: 0px 5px 5px rgb(207, 166, 146); 
 }
 
-.container {
-    width: 100vw;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    }
+.header__container {
+   
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
   
+  .logo {
+
+    width: 10%;
+    border-radius: 50%;
+  }
+
   nav {
     display: flex;
     justify-content: center;
@@ -60,7 +64,7 @@ header {
     align-items: center;
   }
   
-  .item {
+  .nav__item {
     position: relative;
     width: 140px;
     height: 40px;
@@ -75,7 +79,7 @@ header {
     overflow: hidden;
   }
   
-  .item a {
+  .nav__item a {
     font-size: 16px;
     text-transform: uppercase;
     color: #f2c75c;
@@ -84,11 +88,11 @@ header {
     transition: color 200ms ease;
   }
   
-  .item:hover a {
+  .nav__item:hover a {
     color: #003b49;
   }
   
-  .item:before {
+  .nav__item:before {
     content: "";
     position: absolute;
     width: 0%;
@@ -98,95 +102,240 @@ header {
     transition: width 400ms ease;
   }
   
-  .item:hover:before {
+  .nav__item:hover:before {
     width: 120%;
   }
   
-  .item:nth-child(2):before {
+  .nav__item:nth-child(2):before {
     transform: skew(-20deg);
   }
   
-  .item:nth-child(3):before {
+  .nav__item:nth-child(3):before {
     transform: skew(0deg);
   }
   
-  .item:nth-child(4):before {
+  .nav__item:nth-child(4):before {
     width: 180px;
     height: 0%;
     bottom: 0px;
     transition: height 400ms ease;
   }
   
-  .item:nth-child(4):hover:before {
+  .nav__item:nth-child(4):hover:before {
     height: 100%;
   }
   
-  /* // PAGE CONTENT */
+  /* // PAGE CONTENT ----------------------------------------------------------------------------------------------------------*/
 
 body {
+    background-color: #003b49;
+}
+
+main { 
+    margin-inline: auto;
+    width: 95%;
+    height: auto;
+    border-radius: 10px;
+    color: #f2c75c;
     background-image: url(Beaver\ Creek.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgb(114, 52, 52);
-    min-height: 100%;
-    
-}
-
-main {
-    background-color: bisque;
-    margin: 0 50px;
-    outline: 5px solid #003b49;
-    width: 80%;
-    margin: auto;
-    border-radius: 10px;
+    background-attachment: fixed; 
 }
 
 
 
-div.hero {
+div.main__hero {
+
+  
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 30px;
     padding: 15px;
+    gap: 1em;
+    border: 3px groove #f2c75c;
+    background-color: #003b49;
 }
 
-p.hero {
+p.main__hero {
 
     grid-column: 1/4;
 }
 
-img.pic1 {
+.main__image {
 
     grid-column-start: 4;
 }
 
-div.summary {
+.main__summary {
     margin: 30px;
     padding: 15px;
+    background-color: #003a4954;
 }
 
+.section__one {
+  margin: 30px;
+  padding: 15px;
+  background-color: #003a49de;
+  border: 3px groove #f2c75c;
+
+}
+
+.main__popout {
+
+  margin-left:-5%;
+  width:110%;
+  padding: 20px;
+  background-color: rgba(255, 198, 129, 0.959);
+  color: #003b49;
+  border-radius: 5%;
+  border: 6px ridge rgb(255, 223, 43);
+  box-shadow: 0 0 100px #3b2c1e;
+  font-size: 1.4rem;
+}
+
+
+
+.main__info {
+text-align: center;
+padding: 10px;
+}
+
+div.span__image {
+  object-fit: stretch;
+  background-image: url(/Dirt\ Road.JPG);
+  background-position: 58% 48%;
+  padding-top: 25px;
+
+}
+
+.section__two {
+
+  margin: 30px;
+  padding: 15px;
+  background-color: #003a49d0;
+  border: 3px groove #f2c75c;
+}
+
+.main__image__spanner {
+
+  visibility:hidden;
+}
+
+.section__three {
+
+  margin: 30px;
+  padding: 15px;
+  background-color: #003a49de;
+  border: 3px groove #f2c75c;
+}
+
+.section__four {
+
+  margin: 30px;
+  padding: 15px;
+  background-color: #003a49e8;
+  border: 3px groove #f2c75c;
+}
+
+.bottom__image {
+
+  float: left;
+  padding: 25px;
+  width: 100%;
+  object-fit: contain;
+}
+
+
+div.seal {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+.main__seal__img {
+
+  border-radius: 50%;
+  margin: 25px;
+  width: 100%;
+  justify-self: center;
+}
+
+
+
+a.main__link:hover {
+cursor: pointer;
+border-radius: 50%;
+box-shadow:  0 0 150px #f2c75c73;
+
+
+}
+
+.main__info__images {
+
+  display: grid;
+  width:100%;
+  height: auto;
+  gap: 2rem;
+  grid-template-columns: 
+    repeat(auto-fit, minmax(200px, 1fr));
+  margin-inline:auto ; 
+  text-align: center;
+}
+
+
+.main__info__map {
+  display: flex;
+  flex-direction: column; 
+  justify-self: center;
+  gap:1rem;
+
+}
+
+
+.main__info__county {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  gap:1rem;
+}
+
+img.main__link__map1 {
+  width: 100%;
+}
+
+img.main__link__map2 {
+  width: 100%;
+}
+
+
+/* //FOOTER --------------------------------------------------------------------------------------*/
+
 footer {
-  background-image: url(mountains.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: rgb(70, 70, 209);
-    padding: 15px;
-  position: sticky;
-  top: 100%;
+  background-image: url(fotor-ai-2024062794042.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 78%;
+  background-color: rgb(70, 70, 209);
+  padding: 15px;
   text-align: center;
   color: #f2c75c;
   display: flex;
   justify-content: center;
   
 }
-.copywrite {
+.footer__copywrite {
   background-color: #003b49;
   border-radius: 10px;
   width: 600px;
   text-align: center;
 }
 
+
+/* //MEDIA QUIERIES */
 
 @media screen and (max-width: 375px) {
 
@@ -207,17 +356,17 @@ footer {
     width: 90%;
   }
 
-  .item {
+  .nav__item {
     width: 90%;
     height: auto;
     margin: 0px 5px;
   }
 
-  .item a {
+  .nav__item a {
     font-size: .4rem;
   }
 
-  div.hero {
+  div.main__hero {
     display: flex;
     flex-direction: column;
     margin: 30px;
@@ -226,18 +375,22 @@ footer {
 
 
 
-img.pic1 {
+.main__image {
 
   width: 100%;
+  justify-self: center;
 }
 
 h1 {
   display: inline-block;
   font-size: xx-large;
 }
+
+
+
 }
 
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 850px) {
 
   html {
     font-size: 1.5rem;
@@ -266,7 +419,7 @@ h1 {
     font-size: .4rem;
   }
 
-  div.hero {
+  div.main__hero {
     display: flex;
     flex-direction: column;
     margin: 30px;
@@ -277,7 +430,7 @@ h1 {
 
 img.pic1 {
   display: inline-block;
-  width: 90%;
+  width: 100%;
 }
 
 h1 {

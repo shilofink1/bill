@@ -9,31 +9,39 @@ img {
     width: 300px;
     height: auto;
     padding: 5px;
+    border: 2px groove gold;
 }
 
 html {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    font-family: "Playfair Display", sans-serif;
 }
 
 header {
-    background-image: url(mountains.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: rgb(70, 70, 209);
-    padding: 10px;
-    box-shadow: 0px 5px 15px tan;
+  background-image: url(fotor-ai-2024062794042.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 73%;
+  background-color: rgb#003b49;
+  padding: 10px;
+  box-shadow: 0px 5px 5px rgb(207, 166, 146); 
     
     
 }
 
-.container {
-    width: 100vw;
+.header__container {
+    
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     }
   
+    .logo {
+
+      width: 10%;
+      border-radius: 50%;
+    }
+
   nav {
     display: flex;
     justify-content: center;
@@ -54,7 +62,7 @@ header {
     align-items: center;
   }
   
-  .item {
+  .nav__item {
     position: relative;
     width: 140px;
     height: 40px;
@@ -69,7 +77,7 @@ header {
     overflow: hidden;
   }
   
-  .item a {
+  .nav__item a {
     font-size: 16px;
     text-transform: uppercase;
     color: #f2c75c;
@@ -78,11 +86,11 @@ header {
     transition: color 200ms ease;
   }
   
-  .item:hover a {
+  .nav__item:hover a {
     color: #003b49;
   }
   
-  .item:before {
+  .nav__item:before {
     content: "";
     position: absolute;
     width: 0%;
@@ -92,92 +100,121 @@ header {
     transition: width 400ms ease;
   }
   
-  .item:hover:before {
+  .nav__item:hover:before {
     width: 120%;
   }
   
-  .item:nth-child(2):before {
+  .nav__item:nth-child(2):before {
     transform: skew(-20deg);
   }
   
-  .item:nth-child(3):before {
+  .nav__item:nth-child(3):before {
     transform: skew(0deg);
   }
   
-  .item:nth-child(4):before {
+  .nav__item:nth-child(4):before {
     width: 180px;
     height: 0%;
     bottom: 0px;
     transition: height 400ms ease;
   }
   
-  .item:nth-child(4):hover:before {
+  .nav__item:nth-child(4):hover:before {
     height: 100%;
   }
 
   
 
+ /* // PAGE CONTENT ----------------------------------------------------------------------------------------------------------*/
 
-body {
-    background-image: url(havre-scenery.jpg);
-    background-repeat: no-repeat;
-    background-size: fill;
-    background-color: rgb(114, 52, 52);
-    height: 90vh;
-    
+ body {
+  background-color: #003b49;
 }
 
 main {
-    background-color: bisque;
-    
-    outline: 2px solid green;
-    width: 80vw;
-    margin: auto;
-    position: relative;
-    overflow: hidden;
-    
+  
+  margin-inline: auto;
+    width: 95%;
+    height: auto;
+    border-radius: 10px;
+    color: #f2c75c;
+    background-image: url(Beaver\ Creek.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
 }
 
-div.myStory {
-    margin: 30px;
+.main__myStory {
+    margin: 10px;
     padding: 15px;
     font-size: 1rem;
+    background-color: #003a495e;
     
 }
+.section__one {
+  margin: 20px;
+  padding: 5px;
+  background-color: #003a49de;
+  border: 3px groove #f2c75c;
 
-img.bill1 {
+}
+
+.main__imageLeft {
 
     float: left;
     margin: 15px;
+    border-radius: 5%;
 }
 
-img.dogScout {
+.section__two {
+  margin: 30px;
+  padding: 15px;
+  background-color: #003a49de;
+  border: 3px groove #f2c75c;
+
+}
+.main__imageRight {
     float: right;
-    margin: 15px;
-    
+    margin: 15px; 
+    border-radius: 5%;
+}
+
+.section__three {
+  margin: 20px;
+  padding: 5px;
+  background-color: #003a49de;
+  border: 3px groove #f2c75c;
+
+}
+
+.main__h3 {
+
+  text-decoration: underline;
+}
+
+li.main__community {
+  margin-left: 4em;
 }
 
 
 footer {
-    background-image: url(mountains.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: rgb(70, 70, 209);
-    padding: 15px;
-  position: sticky;
-  top: 100%;
+  background-image: url(fotor-ai-2024062794042.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 78%;
+  background-color: rgb(70, 70, 209);
+  padding: 15px;
   text-align: center;
   color: #f2c75c;
   display: flex;
   justify-content: center;
+  
 }
-
-.copywrite {
-    background-color: #003b49;
-    border-radius: 10px;
-    width: 600px;
-    text-align: center;
+.footer__copywrite {
+  background-color: #003b49;
+  border-radius: 10px;
+  width: 600px;
+  text-align: center;
 }
 
 
@@ -200,17 +237,17 @@ footer {
     width: 90%;
   }
 
-  .item {
+  .nav__item {
     width: 90%;
     height: auto;
     margin: 0px 5px;
   }
 
-  .item a {
+  .nav__item a {
     font-size: .4rem;
   }
 
-  img.bill1 {
+  .main__imageRight {
     display: block;
     width: auto;
     margin: auto;
@@ -219,7 +256,7 @@ footer {
     float: none;
 }
 
-img.dogScout {
+.main__imageLeft {
     display: block;
     width: auto;
     margin: auto;
@@ -249,17 +286,17 @@ img.dogScout {
     width: 90%;
   }
 
-  .item {
+  .nav__item {
     width: 90%;
     height: auto;
     margin: 0px 5px;
   }
 
-  .item a {
+  .nav__item a {
     font-size: .4rem;
   }
 
-  img.bill1 {
+  .main__imageRight {
     display: block;
     width: auto;
     margin: auto;
@@ -268,7 +305,7 @@ img.dogScout {
     float: none;
 }
 
-img.dogScout {
+.main__imageLeft {
     display: block;
     width: auto;
     margin: auto;
@@ -276,5 +313,10 @@ img.dogScout {
     max-height: 100%;
     padding: 25px;
     float: none;
+}
+
+li.main__community {
+
+  margin-left: 1em;
 }
 }

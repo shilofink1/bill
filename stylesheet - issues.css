@@ -10,34 +10,40 @@
 
 img {
     display: inline;
-    
-    width: 300px;
+    max-width: 300px;
     height: auto;
 }
 
 html {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    font-family: "Playfair Display", sans-serif;
 }
 
-/* // NAVIGATION MENU */
+/* // NAVIGATION MENU ----------------------------------------------------------------------------------------*/
 
 header {
-    background-image: url(mountains.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: rgb(70, 70, 209);
-    padding: 10px;
-    box-shadow: 0px 5px 15px tan;
+  background-image: url(fotor-ai-2024062794042.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 73%;
+  background-color: rgb#003b49;
+  padding: 10px;
+  box-shadow: 0px 5px 5px rgb(207, 166, 146); 
     
     
 }
 
-.container {
-    width: 100vw;
+.header__container {
+    
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
+    }
+
+    .logo {
+
+      width: 10%;
+      border-radius: 50%;
     }
   
   nav {
@@ -60,7 +66,7 @@ header {
     align-items: center;
   }
   
-  .item {
+  .nav__item {
     position: relative;
     width: 140px;
     height: 40px;
@@ -75,7 +81,7 @@ header {
     overflow: hidden;
   }
   
-  .item a {
+  .nav__item a {
     font-size: 16px;
     text-transform: uppercase;
     color: #f2c75c;
@@ -84,11 +90,11 @@ header {
     transition: color 200ms ease;
   }
   
-  .item:hover a {
+  .nav__item:hover a {
     color: #003b49;
   }
   
-  .item:before {
+  .nav__item:before {
     content: "";
     position: absolute;
     width: 0%;
@@ -98,82 +104,177 @@ header {
     transition: width 400ms ease;
   }
   
-  .item:hover:before {
+  .nav__item:hover:before {
     width: 120%;
   }
   
-  .item:nth-child(2):before {
+  .nav__item:nth-child(2):before {
     transform: skew(-20deg);
   }
   
-  .item:nth-child(3):before {
+  .nav__item:nth-child(3):before {
     transform: skew(0deg);
   }
   
-  .item:nth-child(4):before {
+  .nav__item:nth-child(4):before {
     width: 180px;
     height: 0%;
     bottom: 0px;
     transition: height 400ms ease;
   }
   
-  .item:nth-child(4):hover:before {
+  .nav__item:nth-child(4):hover:before {
     height: 100%;
   }
-  
 
-body {
-    background-image: url(Beaver\ Creek.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgb(114, 52, 52);
-    min-height: 100vh;
-    
+ /* // PAGE CONTENT ----------------------------------------------------------------------------------------------------------*/
+
+ body {
+  background-color: #003b49;
 }
 
 main {
-    background-color: bisque;
-    margin: 0 50px;
-    outline: 5px solid #003b49;
-    width: 80vw;
-    margin: auto;
+  margin-inline: auto;
+    width: 95%;
+    height: auto;
     border-radius: 10px;
+    color: #f2c75c;
+    background-image: url(Beaver\ Creek.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+.main__summary {
+
+  background-color: #003a494b;
+}
+
+.main__top {
+  margin: 30px;
+  padding: 15px;
+  background-color: #003a49de;
+  border: 3px groove #f2c75c;
+
+}
+
+.main__issues {
+  margin: 30px;
+  padding: 15px;
+  background-color: #003a49de;
+  border: 3px groove #f2c75c;
+
+}
+
+.main__divider {
+  display: grid;
+  grid-template-columns: 
+  1fr, 1fr;
+}
+
+ul.main__values {
+
+  list-style-type:none ; 
+  margin: 15px 0;
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+li.values__points {
+
+ 
+  text-shadow:0px 2px 5px rgb(219, 183, 116);
+  text-decoration: underline;
+  font-size: 1.5rem;
+}
+
+dl {
+
+  margin-left: 1em;
 }
 
 
-
-img.shake {
-    float: right;
+.main__imageRight {
     margin: 10px;
+    width: 100%;
+    min-height: 100%;
+    grid-column-start: 2;
 }
 
-div.summary {
+.main__summary {
     margin: 30px;
     padding: 15px;
 }
 
+div.test {
+  object-fit: stretch;
+  background-image: url(/train.jpg);
+  border-radius: 1%;
+  background-position: 85% 61%;
+
+}
+
+.main__image__spanner {
+
+  visibility: hidden;
+}
+
+
+/* //ACCORDIAN --------------------------------------------------------------------------------------*/
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: .1px solid #003b49;
+  border-radius: 25px;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 15px 18px;
+  display: none;
+  border: 2px solid #f2c75c;;
+  border-radius: 25px;
+  background-color: #003b49;
+  overflow: hidden;
+}
+
+/* //FOOTER --------------------------------------------------------------------------------------*/
+
 footer {
-    background-image: url(mountains.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: rgb(70, 70, 209);
-    padding: 15px;
-  position: sticky;
-  top: 100%;
-  text-align: center;
-  color: #f2c75c;
-  display: flex;
-  justify-content: center;
+  background-image: url(fotor-ai-2024062794042.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 78%;
+  background-color: rgb(70, 70, 209);
+  padding: 15px;
+position: sticky;
+top: 100%;
+text-align: center;
+color: #f2c75c;
+display: flex;
+justify-content: center;
   
 }
-.copywrite {
+.footer__copywrite {
   background-color: #003b49;
   border-radius: 10px;
   width: 600px;
   text-align: center;
 }
 
+
+/* //MEDIA QUIERIES ----------------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 375px) {
 
@@ -194,17 +295,23 @@ footer {
     width: 90%;
   }
 
-  .item {
+  .nav__item {
     width: 90%;
     height: auto;
     margin: 0px 5px;
   }
 
-  .item a {
+  .nav__item a {
     font-size: .4rem;
   }
 
-  img.shake {
+  .main__divider {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    padding: 15px;
+  }
+  .main__imageRight {
     display: block;
     width: auto;
     margin: auto;
@@ -233,17 +340,24 @@ footer {
     width: 90%;
   }
 
-  .item {
+  .nav__item {
     width: 90%;
     height: auto;
     margin: 0px 5px;
   }
 
-  .item a {
+  .nav__item a {
     font-size: .4rem;
   }
 
-  img.shake {
+  .main__divider {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 5px;
+  }
+
+  .main__imageRight {
     display: block;
     width: auto;
     margin: auto;

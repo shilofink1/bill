@@ -6,31 +6,39 @@
 
 img {
     display: inline;
-    width: 300px;
+    max-width: 500px;
     height: auto;
 }
 
 html {
     font-size: 2rem;
+    font-family: "Playfair Display", sans-serif;
 }
 
 header {
-    background-image: url(mountains.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: rgb(70, 70, 209);
-    padding: 10px;
-    box-shadow: 0px 5px 15px tan;
+  background-image: url(fotor-ai-2024062794042.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 73%;
+  background-color: rgb#003b49;
+  padding: 10px;
+  box-shadow: 0px 5px 5px rgb(207, 166, 146); 
     
     
 }
 
+/* // NAVIGATION MENU ----------------------------------------------------------------------------------------*/
 .container {
-    width: 100vw;
+    
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
+    }
+
+    .logo {
+
+      width: 10%;
+      border-radius: 50%;
     }
   
   nav {
@@ -114,21 +122,61 @@ header {
     height: 100%;
   }
 
-body {
-    background-image: url(Beaver\ Creek.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgb(114, 52, 52);
-    min-height: 100vh;
-    
+ /* // PAGE CONTENT ----------------------------------------------------------------------------------------------------------*/
+
+ body {
+  background-color: #003b49;
 }
 
 main {
-    background-color: bisque;
-    margin: 0 50px;
-    outline: 2px solid green;
-    width: 80vw;
-    margin: auto;
+  margin-inline: auto;
+    width: 95%;
+    height: auto;
+    border-radius: 10px;
+    color: #f2c75c;
+    background-image: url(Beaver\ Creek.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+div.contact__wrapper {
+
+  display: grid;
+  width:100%;
+  height: auto;
+  gap: 2rem;
+  grid-template-columns: 
+    repeat(auto-fit, minmax(300px, 1fr));
+  margin-inline:auto; 
+  text-align: center;
+}
+
+.section__one {
+  
+  margin: 20px;
+  padding: 5px;
+  background-color: #003a49de;
+  border: 3px groove #f2c75c;
+  overflow: hidden;
+
+}
+
+.contact__pic {
+
+  border-radius: 5%;
+  max-width: auto;
+  float: right;
+  padding: 25px;
+  
+}
+
+.section__two {
+  margin: 20px;
+  padding: 5px;
+  background-color: #003a49de;
+  border: 3px groove #f2c75c;
+
 }
 
 div.contact {
@@ -138,6 +186,7 @@ div.contact {
     padding: 15px;
 }
 
+
 div.info {
     display: flex;
     flex-direction: column;
@@ -145,36 +194,80 @@ div.info {
 
 }
 
-img.email {
-    width: 15%;
+a.donate:hover {
+box-shadow:0px 5px 25px #f2c75c;
+
+}
+
+img.card__pic {
+  margin-inline: auto;
+  border-radius: 5%;
+  align-self: center;
+  justify-content: center;
+}
+
+.donation__text {
+
+  text-align: center;
+}
+
+.email__icon {
+    width: 25%;
     height: auto;
 }
 
-img.phone {
-    width: 15%;
+.phone__icon {
+    width: 25%;
     height: auto;
 }
 
-.contact__pic {
+.email__text {
 
-    border-radius: 50%;
-    
+  font-size: .8rem;
+  overflow-wrap: break-word;
+}
+
+.phone__text {
+
+  text-wrap: wrap;
+}
+.facebook__icon {
+  width: 25%;
+  height: auto;
+}
+.facebook__text {
+
+  text-wrap: wrap;
+  text-decoration: none;
+}
+
+a:visited, a:active {
+
+  text-decoration: none;
+  color: #f2c75c;
+}
+
+ a:hover {
+  color: #ffb700;
 }
 
 
+
+
+/* //FOOTER --------------------------------------------------------------------------------------*/
 footer {
-  background-image: url(mountains.jpg);
+  background-image: url(fotor-ai-2024062794042.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 50% 78%;
   background-color: rgb(70, 70, 209);
   padding: 15px;
-  position: sticky;
-  top: 100%;
-  text-align: center;
-  color: #f2c75c;
-  display: flex;
-  justify-content: center;
+position: sticky;
+top: 100%;
+text-align: center;
+color: #f2c75c;
+display: flex;
+justify-content: center;
 }
 
 .copywrite {
@@ -183,6 +276,8 @@ footer {
   width: 600px;
   text-align: center;
 }
+
+/* //MEDIA QUIERIES ----------------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 375px) {
 
@@ -213,6 +308,17 @@ footer {
     font-size: .4rem;
   }
 
+  div.contact__wrapper {
+
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    padding: 15px;
+    justify-content: center;
+    justify-self: center;
+  }
+
+
   .contact__pic {
     display: block;
     width: auto;
@@ -220,6 +326,7 @@ footer {
     max-width: 100%;
     max-height: 100%;
     float: none;
+    justify-self: center;
   }
 
   div.info {
@@ -228,7 +335,23 @@ footer {
     font-size: 1rem;
   }
 
-  img.email {
+  .email__icon {
+    display: block;
+    width: auto;
+    margin: auto;
+    max-width: 50%;
+    max-height: 50%;
+    padding: 25px;
+    float: none;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+
+  }
+
+  .phone__icon {
+
     display: block;
     width: auto;
     margin: auto;
@@ -238,20 +361,13 @@ footer {
     float: none;
   }
 
-  img.phone {
-
+  .facebook__icon {
     display: block;
     width: auto;
     margin: auto;
     max-width: 50%;
     max-height: 50%;
     padding: 25px;
-    float: none;
-  }
-
-  .banana {
-
-    font-size: .7rem;
   }
 }
 
@@ -299,7 +415,7 @@ footer {
     font-size: 1rem;
   }
 
-  img.email {
+  .email__icon {
     display: block;
     width: auto;
     margin: auto;
@@ -309,7 +425,7 @@ footer {
     float: none;
   }
 
-  img.phone {
+  .phone__icon {
 
     display: block;
     width: auto;
@@ -320,8 +436,14 @@ footer {
     float: none;
   }
 
-  .banana {
+  .facebook__icon {
 
-    font-size: .7rem;
+    display: block;
+    width: auto;
+    margin: auto;
+    max-width: 50%;
+    max-height: 50%;
+    padding: 25px;
+    float: none;
   }
 }
